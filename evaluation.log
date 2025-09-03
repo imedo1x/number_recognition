@@ -1,0 +1,14 @@
+2025-09-02 18:19:17,768 - INFO - Created output directory: D:\Python_Projects\number_recognition\number_recognition\evaluation_results
+2025-09-02 18:19:17,769 - INFO - Using device: cpu
+2025-09-02 18:19:17,778 - INFO - Loaded test dataset with 2990 samples
+2025-09-02 18:19:17,794 - INFO - Loaded model from: D:\Python_Projects\number_recognition\number_recognition\models\digit_cnn.pth
+2025-09-02 18:19:17,794 - INFO - Starting evaluation...
+2025-09-02 18:19:34,594 - INFO - ✅ Evaluation completed! Accuracy: 99.40%
+2025-09-02 18:19:35,131 - INFO - ==================================================
+2025-09-02 18:19:35,131 - INFO -        FINAL EVALUATION RESULTS
+2025-09-02 18:19:35,131 - INFO - ==================================================
+2025-09-02 18:19:35,132 - INFO - Total samples: 2990
+2025-09-02 18:19:35,132 - INFO - Correct predictions: 2972
+2025-09-02 18:19:35,133 - INFO - Accuracy: 99.40%
+2025-09-02 18:19:35,133 - INFO - Results saved to: D:\Python_Projects\number_recognition\number_recognition\evaluation_results
+2025-09-02 18:19:35,133 - INFO - ==================================================

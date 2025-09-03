@@ -1,0 +1,66 @@
+2025-09-02 18:54:40,553 - INFO - Using device: cpu
+2025-09-02 18:54:41,239 - INFO - Train set: 20930 samples
+2025-09-02 18:54:41,239 - INFO - Validation set: 5980 samples
+2025-09-02 18:54:41,268 - INFO - Intialized new model
+2025-09-02 18:57:04,070 - INFO - Using device: cpu
+2025-09-02 18:57:04,879 - INFO - Train set: 20930 samples
+2025-09-02 18:57:04,880 - INFO - Validation set: 5980 samples
+2025-09-02 18:57:04,908 - INFO - Intialized new model
+2025-09-02 18:57:04,909 - INFO - ⚠️ Using LR scheduler without verbose parameter (older PyTorch version)
+2025-09-02 19:02:12,574 - INFO - Using device: cpu
+2025-09-02 19:02:13,405 - INFO - Train set: 20930 samples
+2025-09-02 19:02:13,405 - INFO - Validation set: 5980 samples
+2025-09-02 19:02:13,442 - INFO - Intialized new model
+2025-09-02 19:02:13,443 - INFO - ⚠️ Using LR scheduler without verbose parameter (older PyTorch version)
+2025-09-02 19:04:02,244 - INFO - Using device: cpu
+2025-09-02 19:04:03,034 - INFO - Train set: 20930 samples
+2025-09-02 19:04:03,036 - INFO - Validation set: 5980 samples
+2025-09-02 19:04:03,065 - INFO - Intialized new model
+2025-09-02 19:04:03,066 - INFO - ⚠️ Using LR scheduler without verbose parameter (older PyTorch version)
+2025-09-02 19:30:59,009 - INFO - Using device: cpu
+2025-09-02 19:31:00,027 - INFO - Train set: 20930 samples
+2025-09-02 19:31:00,027 - INFO - Validation set: 5980 samples
+2025-09-02 19:31:00,055 - INFO - Intialized new model
+2025-09-02 19:32:35,294 - INFO - ✅ Best model saved with accuracy: 75.38%
+2025-09-02 19:32:35,294 - INFO - Epoch 1: Train Loss: 2.2640, Val Loss: 2.0757, Val Acc: 75.38% (Best: 75.38%)
+2025-09-02 19:34:17,426 - INFO - ✅ Best model saved with accuracy: 89.83%
+2025-09-02 19:34:17,426 - INFO - Epoch 2: Train Loss: 1.7966, Val Loss: 0.9258, Val Acc: 89.83% (Best: 89.83%)
+2025-09-02 19:35:54,751 - INFO - ✅ Best model saved with accuracy: 94.78%
+2025-09-02 19:35:54,751 - INFO - Epoch 3: Train Loss: 0.8542, Val Loss: 0.2574, Val Acc: 94.78% (Best: 94.78%)
+2025-09-02 19:37:29,464 - INFO - ✅ Best model saved with accuracy: 96.54%
+2025-09-02 19:37:29,464 - INFO - Epoch 4: Train Loss: 0.4404, Val Loss: 0.1441, Val Acc: 96.54% (Best: 96.54%)
+2025-09-02 19:39:19,155 - INFO - ✅ Best model saved with accuracy: 96.84%
+2025-09-02 19:39:19,156 - INFO - Epoch 5: Train Loss: 0.2933, Val Loss: 0.1118, Val Acc: 96.84% (Best: 96.84%)
+2025-09-02 19:40:56,430 - INFO - ✅ Best model saved with accuracy: 97.42%
+2025-09-02 19:40:56,430 - INFO - Epoch 6: Train Loss: 0.2314, Val Loss: 0.0881, Val Acc: 97.42% (Best: 97.42%)
+2025-09-02 19:42:30,607 - INFO - ✅ Best model saved with accuracy: 97.61%
+2025-09-02 19:42:30,607 - INFO - Epoch 7: Train Loss: 0.1869, Val Loss: 0.0807, Val Acc: 97.61% (Best: 97.61%)
+2025-09-02 19:44:03,656 - INFO - ✅ Best model saved with accuracy: 97.91%
+2025-09-02 19:44:03,657 - INFO - Epoch 8: Train Loss: 0.1682, Val Loss: 0.0737, Val Acc: 97.91% (Best: 97.91%)
+2025-09-02 19:45:38,131 - INFO - Epoch 9: Train Loss: 0.1505, Val Loss: 0.0714, Val Acc: 97.71% (Best: 97.91%)
+2025-09-02 19:47:11,493 - INFO - ✅ Best model saved with accuracy: 98.16%
+2025-09-02 19:47:11,494 - INFO - Epoch 10: Train Loss: 0.1406, Val Loss: 0.0605, Val Acc: 98.16% (Best: 98.16%)
+2025-09-02 19:48:44,627 - INFO - Epoch 11: Train Loss: 0.1246, Val Loss: 0.0632, Val Acc: 98.03% (Best: 98.16%)
+2025-09-02 19:50:41,216 - INFO - ✅ Best model saved with accuracy: 98.36%
+2025-09-02 19:50:41,217 - INFO - Epoch 12: Train Loss: 0.1175, Val Loss: 0.0592, Val Acc: 98.36% (Best: 98.36%)
+2025-09-02 19:52:21,456 - INFO - Epoch 13: Train Loss: 0.1097, Val Loss: 0.0561, Val Acc: 98.24% (Best: 98.36%)
+2025-09-02 19:53:52,792 - INFO - Epoch 14: Train Loss: 0.1043, Val Loss: 0.0564, Val Acc: 98.28% (Best: 98.36%)
+2025-09-02 19:55:30,445 - INFO - ✅ Best model saved with accuracy: 98.63%
+2025-09-02 19:55:30,445 - INFO - Epoch 15: Train Loss: 0.1035, Val Loss: 0.0509, Val Acc: 98.63% (Best: 98.63%)
+2025-09-02 19:57:03,742 - INFO - Epoch 16: Train Loss: 0.0953, Val Loss: 0.0515, Val Acc: 98.29% (Best: 98.63%)
+2025-09-02 19:59:28,317 - INFO - Epoch 17: Train Loss: 0.0911, Val Loss: 0.0496, Val Acc: 98.44% (Best: 98.63%)
+2025-09-02 20:02:42,567 - INFO - Epoch 18: Train Loss: 0.0862, Val Loss: 0.0501, Val Acc: 98.51% (Best: 98.63%)
+2025-09-02 20:05:59,157 - INFO - Epoch 19: Train Loss: 0.0892, Val Loss: 0.0497, Val Acc: 98.60% (Best: 98.63%)
+2025-09-02 20:08:29,399 - INFO - ✅ Best model saved with accuracy: 98.65%
+2025-09-02 20:08:29,400 - INFO - Epoch 20: Train Loss: 0.0829, Val Loss: 0.0446, Val Acc: 98.65% (Best: 98.65%)
+2025-09-02 20:10:01,178 - INFO - ✅ Best model saved with accuracy: 98.76%
+2025-09-02 20:10:01,178 - INFO - Epoch 21: Train Loss: 0.0787, Val Loss: 0.0430, Val Acc: 98.76% (Best: 98.76%)
+2025-09-02 20:11:26,541 - INFO - ✅ Best model saved with accuracy: 98.80%
+2025-09-02 20:11:26,541 - INFO - Epoch 22: Train Loss: 0.0792, Val Loss: 0.0419, Val Acc: 98.80% (Best: 98.80%)
+2025-09-02 20:12:33,801 - INFO - Epoch 23: Train Loss: 0.0749, Val Loss: 0.0451, Val Acc: 98.71% (Best: 98.80%)
+2025-09-02 20:13:42,167 - INFO - Epoch 24: Train Loss: 0.0781, Val Loss: 0.0439, Val Acc: 98.68% (Best: 98.80%)
+2025-09-02 20:14:50,271 - INFO - Epoch 25: Train Loss: 0.0755, Val Loss: 0.0426, Val Acc: 98.70% (Best: 98.80%)
+2025-09-02 20:14:50,272 - INFO - 🎉 Training completed!
+2025-09-02 20:14:50,272 - INFO - 📊 Final Validation Accuracy: 98.70%
+2025-09-02 20:14:50,272 - INFO - 🏆 Best Validation Accuracy: 98.80%
+2025-09-02 20:14:50,272 - INFO - 💾 Model saved to: D:\Python_Projects\number_recognition\number_recognition\models\digit_cnn_improved.pth
