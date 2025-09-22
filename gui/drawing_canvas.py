@@ -1,21 +1,21 @@
 # gui/drawing_canvas.py
 import tkinter as tk
 from PIL import Image, ImageDraw
-from .prediction import predict_digit
+from .prediction import predict_multiple_digits
 
 class DrawingCanvas:
     def __init__(self, parent, app):
         self.app = app
         self.parent = parent
         
-        # --- Canvas for drawing ---
-        self.canvas = tk.Canvas(parent, width=280, height=280, bg="black", cursor="cross")
+        # --- Canvas for drawing (made wider for multiple digits) ---
+        self.canvas = tk.Canvas(parent, width=560, height=280, bg="black", cursor="cross")
         self.canvas.pack(pady=(15, 5))
         self.canvas.bind("<B1-Motion>", self.paint)
         self.canvas.bind("<Button-1>", self.start_draw)
         
-        # --- Create drawing image ---
-        self.image = Image.new("L", (280, 280), "black")
+        # --- Create drawing image (wider to match canvas) ---
+        self.image = Image.new("L", (560, 280), "black")
         self.draw = ImageDraw.Draw(self.image)
         self.last_x, self.last_y = None, None
         self.drawing = False
@@ -67,7 +67,7 @@ class DrawingCanvas:
             self.result_frame, 
             text="?", 
             font=("Arial", 64, "bold"),
-            width=2,
+            width=8,  # Increased width for more digits
             height=1
         )
         self.result_label.pack(pady=(5, 0))
@@ -109,16 +109,16 @@ class DrawingCanvas:
     def clear(self):
         """Clear the drawing canvas"""
         self.canvas.delete("all")
-        self.image = Image.new("L", (280, 280), "black")
+        self.image = Image.new("L", (560, 280), "black")  # Updated to match new canvas size
         self.draw = ImageDraw.Draw(self.image)
         self.last_x, self.last_y = None, None
         self.drawing = False
         self.result_label.config(text="?")
         self.confidence_label.config(text="Confidence: N/A")
-        self.app.status_bar.set("Canvas cleared - draw a new digit")
+        self.app.status_bar.set("Canvas cleared - draw new digits", "normal")
     
     def predict(self):
-        """Predict hand-drawn digit"""
+        """Predict digit(s) from drawing"""
         from .model_loader import load_digit_recognition_model
         
         model = load_digit_recognition_model()
@@ -126,27 +126,37 @@ class DrawingCanvas:
             self.app.status_bar.set("Error: Model failed to load", "error")
             return
         
-        # Use shared prediction logic
-        result = predict_digit(model, self.image)
+        # Use multi-digit prediction
+        result = predict_multiple_digits(model, self.image)
         
         if result["success"]:
-            # Display result with proper spacing
-            self.result_label.config(text=str(result["digit"]))
+            # Display result
+            sequence = result["sequence"]
+            avg_confidence = sum(result["confidence"]) / len(result["confidence"])
+            
+            self.result_label.config(text=sequence)
             
             # Color code based on confidence
-            if result["confidence"] > 0.9:
+            if avg_confidence > 0.85:
                 self.result_label.config(fg="#388E3C")
                 self.confidence_label.config(fg="#388E3C")
-                self.app.status_bar.set("High confidence prediction", "success")
-            elif result["confidence"] > 0.7:
+                status_msg = f"Recognized {sequence}"
+                status_type = "success"
+            elif avg_confidence > 0.65:
                 self.result_label.config(fg="#F57C00")
                 self.confidence_label.config(fg="#F57C00")
-                self.app.status_bar.set("Medium confidence prediction", "warning")
+                status_msg = f"Recognized {sequence} (medium confidence)"
+                status_type = "warning"
             else:
                 self.result_label.config(fg="#D32F2F")
                 self.confidence_label.config(fg="#D32F2F")
-                self.app.status_bar.set("Low confidence - try redrawing", "error")
+                status_msg = f"Recognized {sequence} (low confidence)"
+                status_type = "error"
             
-            self.confidence_label.config(text=f"Confidence: {result['confidence']:.2%}")
+            # Update UI
+            self.confidence_label.config(
+                text=f"Confidence: {avg_confidence:.2%} | {result['count']} digit{'' if result['count'] == 1 else 's'}"
+            )
+            self.app.status_bar.set(status_msg, status_type)
         else:
             self.app.status_bar.set(f"Prediction error: {result['error']}", "error")
